@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node api.js"
+  },
+  "dependencies": {
+    "unirest": "latest"
+  }
+}
