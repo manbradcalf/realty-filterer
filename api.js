@@ -23,8 +23,10 @@ function getDetail(propertyId) {
   console.log("Calling get detail");
   req.end(function (res) {
     if (res.error) throw new Error(res.error);
+    var details = res.body.properties[0];
+    const { schools, ...noSchools} = details;
     console.log(
-      `response body for detail call is: \n\n ${JSON.stringify(res.body)}\n\n`
+      `response body for detail call is: \n\n ${JSON.stringify(noSchools)}`
     );
   });
 }
